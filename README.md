@@ -12,7 +12,9 @@ quadratic equations. This app contains two modes:
 To try this app Node.js has to be installed on your computer.
 To check if it is installed run the following command:
 
-```node -v```
+```bash
+node -v
+```
 
 If you get the version number, you're good to go. Otherwise, visit
 [Node.js](https://nodejs.org/en/download) for installation.
@@ -20,7 +22,9 @@ If you get the version number, you're good to go. Otherwise, visit
 ### Cloning 
 After that, make a local copy of this repository by running this command:
 
-```git clone https://github.com/koksha19/quadratic-equation-solver.git```
+```bash
+git clone https://github.com/koksha19/quadratic-equation-solver.git
+```
 
 ### Launching
 
@@ -28,7 +32,9 @@ After that, make a local copy of this repository by running this command:
 Now that you have the project set up, open terminal or command line in
 the project's folder and run the following command:
 
-```node main```
+```bash
+node main
+```
 
 This command will start the interactive mode of this application. You will
 be asked to enter 3 coefficients of quadratic equation, which will be
@@ -38,11 +44,15 @@ solved next.
 If you want to start the file mode, you should add the coefficients file
 path to the previous command:
 
-```node main [your_path]```
+```bash
+node main [your_path]
+```
 
 Possible command:
 
-```node main ./file.txt```
+```bash
+node main ./file.txt
+```
 
 This command will immediately form an equation based on the file content
 and return the result.
