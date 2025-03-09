@@ -34,7 +34,7 @@ const main = async () => {
     } else {
       try {
         a = await rl.question('a = ');
-        if (isNaN(Number(a)) || '0') {
+        if (isNaN(Number(a)) || a === '0') {
           throw new Error(
             `Expected a valid real number unequal to zero, got ${a} instead`
           );
@@ -51,7 +51,7 @@ const main = async () => {
         }
       } catch (error) {
         console.error(error);
-        await main();
+        return await main();
       }
     }
 
