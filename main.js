@@ -55,7 +55,7 @@ const main = async () => {
       }
     }
 
-    rl.write(`Equation is: (${a})x^2 + (${b})x + (${c})\n`);
+    rl.write(`Equation is: (${a})x^2 + (${b})x + (${c}) = 0\n`);
     const result = solveEquation(a, b, c);
     if (result === -1) {
       rl.write('There are no roots');
