@@ -34,10 +34,11 @@ const main = async () => {
     } else {
       try {
         a = await rl.question('a = ');
-        if (isNaN(Number(a)) || '0') {
-          throw new Error(
-            `Expected a valid real number unequal to zero, got ${a} instead`
-          );
+        if (isNaN(Number(a))) {
+          throw new Error(`Expected a valid real number, got ${a} instead`);
+        }
+        if (a === '0') {
+          throw new Error(`First coefficient can ot be 0`);
         }
 
         b = await rl.question('b = ');
@@ -51,11 +52,11 @@ const main = async () => {
         }
       } catch (error) {
         console.error(error);
-        await main();
+        return await main();
       }
     }
 
-    rl.write(`Equation is: (${a})x^2 + (${b})x + (${c})\n`);
+    rl.write(`Equation is: (${a})x^2 + (${b})x + (${c}) = 0\n`);
     const result = solveEquation(a, b, c);
     if (result === -1) {
       rl.write('There are no roots');
